@@ -1,0 +1,99 @@
+/* ---------- 主题变量 ---------- */
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-2: #fafbfc;
+  --border: #e6e8ee;
+  --border-strong: #d3d8e0;
+  --text: #101828;
+  --text-muted: #667085;
+  --text-faint: #98a2b3;
+  --chip: #eef0f4;
+  --accent: #4f46e5;
+}
+
+html[data-theme='dark'] {
+  --bg: #0e1015;
+  --surface: #171a21;
+  --surface-2: #1b1f28;
+  --border: #262b36;
+  --border-strong: #363d4b;
+  --text: #e7eaf0;
+  --text-muted: #9aa4b5;
+  --text-faint: #6d7686;
+  --chip: #232833;
+  --accent: #7c7ff2;
+}
+
+html[data-theme='sand'] {
+  --bg: #f6f2ea;
+  --surface: #fffdf8;
+  --surface-2: #faf6ee;
+  --border: #e7dfd1;
+  --border-strong: #d5c9b6;
+  --text: #3b3327;
+  --text-muted: #857a68;
+  --text-faint: #a89c88;
+  --chip: #efe8db;
+  --accent: #b45309;
+}
+
+/* ---------- 基础重置 ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  outline-offset: 1px;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+/* 细滚动条 */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}

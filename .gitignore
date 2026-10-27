@@ -1,0 +1,22 @@
+# 依赖与构建产物
+node_modules/
+dist/
+dist-ssr/
+
+# 本地环境
+.DS_Store
+*.local
+.vite/
+npm-debug.log*
+yarn-error.log*
+
+# 发布流程临时凭据，禁止入库
+sts-creds.json
+sts-creds.sh
+params.json
+*.pid
+
+# 编辑器
+.vscode/*
+!.vscode/extensions.json
+.idea/
